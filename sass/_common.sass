@@ -1,60 +1,167 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book", Arial, sans-serif 
-// insert pics into css
-// div
-// 	+pic("blabla.png")
-// span
-// 	+png(blabla)
-// p
-// 	+jpg(bla)
+// fonts
++font(MyriadProRegular, myriadpro-regular)
+=myriad
+	font-family: 'MyriadProRegular', Arial, sans-serif
++font(MyriadProBold, myriadpro-bold)
+=myriad-b
+	font-family: 'MyriadProBold', Arial, sans-serif	
++font(MyriadProLight, myriadpro-light)
+=myriad-l
+	font-family: 'MyriadProLight', Arial, sans-serif
++font(MyriadProLightSemiExtended, myriadpro-lightsemiext)
+=myriad-ls
+	font-family: 'MyriadProLightSemiExtended', Arial, sans-serif
++font(MyriadProSemibold, myriadpro-semibold)
+=myriad-sb
+	font-family: 'MyriadProSemibold', Arial, sans-serif	
++font(FontAwesome, fontawesome-webfont)
+=awesome
+	font-family: 'FontAwesome', Arial, sans-serif	
 
 
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	min-width: 1000px
+	+myriad
+	+font-smoothing 
+	font-size: 15px 
 	line-height: 1.4
 
+h2
+	font-weight: normal
+	font-size: 24px
+	color: #333
+.clr
+	+clr
+.col50
+	float: left
+	width: 50%
+.col25
+	float: left
+	width: 25%	
+.date
+	font-size: 13px
+	color: #979797 
 
 // common blocks      
+.banner
+	position: relative
+	+cover
+	z-index: 1
+.nav
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	z-index: 2
+	&__topper
+		+clr
+	&__left
+		float: left
+	&__right
+		float: right
+		a
+			float: left
+			height: 86px
+			line-height: 86px
+			text-decoration: none
+			color: #fff
+			text-transform: uppercase
+			+myriad-ls
+			font-size: 50px
+			&.catalog-link
+				padding: 0 20px 0 40px
+				background: #f05223
+			&.actions-link
+				padding: 0 20px 0 30px
+				background: #333   
+.menu-link
+	position: relative
+	display: block
+	width: 86px
+	height: 86px
+	background: #333
+	&:before
+		content: ""
+		position: absolute
+		top: 20px
+		left: 20px
+		+s(menu)	
+.menu-wrap
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 86px 
+	background: #333
+	+tr(opacity 250ms)
+	visibility: hidden
+	opacity: 0
+	&.is-open
+		opacity: 1
+		visibility: visible
+.close
+	display: block
+	+s(close)
+	.menu-wrap &, .list-wrap &
+		float: right
+		margin-top: 19px
+		margin-right: 23px
+.menu
+	float: left
+	+clr
+	& > li
+		float: left
+		padding-left: 83px
+		&:first-child
+			padding-left: 60px
+		a
+			display: block
+			height: 86px
+			line-height: 86px
+			color: #fff
+			font-size: 30px
+			+myriad-ls
+			text-transform: uppercase
+			text-decoration: none
+.socials
+	+clr
+	li
+		float: left
+		padding-left: 50px
+.list-wrap
+	+clr
+	position: relative
+	top: -86px 
+	background: #f05223
+	z-index: 2
+	+tr(opacity 250ms)
+	visibility: hidden
+	opacity: 0
+	&.is-open
+		opacity: 1
+		visibility: visible
+.list
+	float: left
+	+clr
+	li
+		float: left
+		a
+			display: block
+			padding: 0 50px
+			height: 86px
+			line-height: 86px 
+			+myriad-ls
+			color: #fff
+			text-decoration: none
+			text-transform: uppercase
+			font-size: 30px
+			+tr(background 200ms)
+			&:hover
+				background: #FFF
+				color: #333 	
+			&:first-child
+				padding: 0 50px 0 60px				
+				  	 						
 
 
 

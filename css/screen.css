@@ -18,9 +18,104 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: MyriadProRegular; src: url("fonts/myriadpro-regular.eot"); src: url("fonts/myriadpro-regular.eot?#iefix") format("embedded-opentype"), url("fonts/myriadpro-regular.woff") format("woff"), url("fonts/myriadpro-regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: MyriadProBold; src: url("fonts/myriadpro-bold.eot"); src: url("fonts/myriadpro-bold.eot?#iefix") format("embedded-opentype"), url("fonts/myriadpro-bold.woff") format("woff"), url("fonts/myriadpro-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: MyriadProLight; src: url("fonts/myriadpro-light.eot"); src: url("fonts/myriadpro-light.eot?#iefix") format("embedded-opentype"), url("fonts/myriadpro-light.woff") format("woff"), url("fonts/myriadpro-light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: MyriadProLightSemiExtended; src: url("fonts/myriadpro-lightsemiext.eot"); src: url("fonts/myriadpro-lightsemiext.eot?#iefix") format("embedded-opentype"), url("fonts/myriadpro-lightsemiext.woff") format("woff"), url("fonts/myriadpro-lightsemiext.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: MyriadProSemibold; src: url("fonts/myriadpro-semibold.eot"); src: url("fonts/myriadpro-semibold.eot?#iefix") format("embedded-opentype"), url("fonts/myriadpro-semibold.woff") format("woff"), url("fonts/myriadpro-semibold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: FontAwesome; src: url("fonts/fontawesome-webfont.eot"); src: url("fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff") format("woff"), url("fonts/fontawesome-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { min-width: 1000px; font-family: "MyriadProRegular", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; font-size: 15px; line-height: 1.4; }
+
+h2 { font-weight: normal; font-size: 24px; color: #333333; }
+
+.clr { *zoom: 1; }
+.clr:after { content: " "; display: table; clear: both; }
+
+.col50 { float: left; width: 50%; }
+
+.col25 { float: left; width: 25%; }
+
+.date { font-size: 13px; color: #979797; }
+
+.banner { position: relative; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index: 1; }
+
+.nav { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
+.nav__topper { *zoom: 1; }
+.nav__topper:after { content: " "; display: table; clear: both; }
+.nav__left { float: left; }
+.nav__right { float: right; }
+.nav__right a { float: left; height: 86px; line-height: 86px; text-decoration: none; color: white; text-transform: uppercase; font-family: "MyriadProLightSemiExtended", Arial, sans-serif; font-size: 50px; }
+.nav__right a.catalog-link { padding: 0 20px 0 40px; background: #f05223; }
+.nav__right a.actions-link { padding: 0 20px 0 30px; background: #333333; }
+
+.menu-link { position: relative; display: block; width: 86px; height: 86px; background: #333333; }
+.menu-link:before { content: ""; position: absolute; top: 20px; left: 20px; background: url('../img/icons-s489c982195.png') 0 -144px no-repeat; width: 46px; height: 42px; }
+
+.menu-wrap { position: absolute; top: 0; left: 0; right: 0; height: 86px; background: #333333; -moz-transition: opacity 250ms; -o-transition: opacity 250ms; -webkit-transition: opacity 250ms; transition: opacity 250ms; visibility: hidden; opacity: 0; }
+.menu-wrap.is-open { opacity: 1; visibility: visible; }
+
+.close { display: block; background: url('../img/icons-s489c982195.png') 0 -56px no-repeat; width: 48px; height: 48px; }
+.menu-wrap .close, .list-wrap .close { float: right; margin-top: 19px; margin-right: 23px; }
+
+.menu { float: left; *zoom: 1; }
+.menu:after { content: " "; display: table; clear: both; }
+.menu > li { float: left; padding-left: 83px; }
+.menu > li:first-child { padding-left: 60px; }
+.menu > li a { display: block; height: 86px; line-height: 86px; color: white; font-size: 30px; font-family: "MyriadProLightSemiExtended", Arial, sans-serif; text-transform: uppercase; text-decoration: none; }
+
+.socials { *zoom: 1; }
+.socials:after { content: " "; display: table; clear: both; }
+.socials li { float: left; padding-left: 50px; }
+
+.list-wrap { *zoom: 1; position: relative; top: -86px; background: #f05223; z-index: 2; -moz-transition: opacity 250ms; -o-transition: opacity 250ms; -webkit-transition: opacity 250ms; transition: opacity 250ms; visibility: hidden; opacity: 0; }
+.list-wrap:after { content: " "; display: table; clear: both; }
+.list-wrap.is-open { opacity: 1; visibility: visible; }
+
+.list { float: left; *zoom: 1; }
+.list:after { content: " "; display: table; clear: both; }
+.list li { float: left; }
+.list li a { display: block; padding: 0 50px; height: 86px; line-height: 86px; font-family: "MyriadProLightSemiExtended", Arial, sans-serif; color: white; text-decoration: none; text-transform: uppercase; font-size: 30px; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; }
+.list li a:hover { background: white; color: #333333; }
+.list li a:first-child { padding: 0 50px 0 60px; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.main { *zoom: 1; }
+.main:after { content: " "; display: table; clear: both; }
+
+.m-shops, .m-news { height: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-bottom: 125%; }
+
+.m-actions, .m-video, .lookbook { padding-bottom: 62.5%; height: 0; }
+
+.m-shops { position: relative; }
+.m-shops__topper { position: absolute; top: 0; left: 0; right: 0; background: #333333; padding: 10px 0; z-index: 2; }
+.m-shops__title { position: relative; padding-left: 20%; font-size: 24px; color: white; text-transform: uppercase; }
+.m-shops__title p { font-family: "MyriadProSemibold", Arial, sans-serif; font-size: 14px; }
+.m-shops__title:before { content: ""; position: absolute; top: 0px; left: 10px; background: url('../img/icons-s489c982195.png') 0 -257px no-repeat; width: 31px; height: 48px; }
+.m-shops__content { position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 1; }
+.m-shops__map { position: relative; height: 100%; width: 100%; }
+
+.m-news { position: relative; background: #333333; }
+.m-news__title { position: relative; padding-left: 85px; padding-top: 25px; margin-bottom: 12%; font-size: 24px; color: white; text-transform: uppercase; }
+.m-news__title:before { content: ""; position: absolute; top: 15px; left: 36px; background: url('../img/icons-s489c982195.png') 0 -196px no-repeat; width: 34px; height: 51px; }
+.m-news__list { padding: 0 10%; }
+.m-news__list li { *zoom: 1; }
+.m-news__list li:after { content: " "; display: table; clear: both; }
+.m-news__date { float: left; padding: 0 10px; margin-right: 10px; height: 29px; line-height: 29px; color: white; background: #f05223; }
+.m-news__link { display: block; padding-top: 5px; margin-bottom: 20px; font-family: "MyriadProLight", Arial, sans-serif; color: white; text-decoration: none; }
+
+.more { position: absolute; bottom: 19px; right: 17px; padding: 0 10px; height: 29px; line-height: 29px; color: white; text-decoration: none; background: #f05223; }
+
+.m-actions { position: relative; background: white; padding-right: 0; padding-left: 6.25%; }
+.m-actions__title { position: relative; padding-left: 50px; padding-top: 22px; margin-bottom: 10%; font-size: 24px; color: #333333; text-transform: uppercase; }
+.m-actions__title:before { content: ""; position: absolute; top: 14px; left: 0; background: url('../img/icons-s489c982195.png') 0 0 no-repeat; width: 19px; height: 46px; }
+.m-actions__content article { padding-top: 40px; float: left; }
+.m-actions__content article p { margin-bottom: 10px; width: 40%; }
+.m-actions__content article img { float: right; max-width: 50%; }
+
+.lookbook { position: relative; }
+.lookbook a { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+.lookbook a img { width: 100%; height: 100%; }
