@@ -1,6 +1,7 @@
 // responsive example, edit or remove
 // just write +r(w1280)
 $min1920: 1920px
+$w1780: 1780px
 $w1560: 1560px
 $w1440: 1440px
 $w1366: 1366px
@@ -8,6 +9,9 @@ $w1280: 1280px
 $w1024: 1024px
 
 =r($media)
+	@if $media == w1780
+		@media only screen and (max-width: $w1780)
+			@content
 	@if $media == w1560
 		@media only screen and (max-width: $w1560)
 			@content
