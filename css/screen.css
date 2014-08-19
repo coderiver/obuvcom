@@ -39,7 +39,7 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 
 .date { font-size: 13px; color: #979797; }
 
-.banner { position: relative; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index: 1; }
+.banner { position: relative; background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index: 1; cursor: pointer; }
 
 .nav { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
 .nav__topper { *zoom: 1; }
@@ -137,7 +137,7 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.main { *zoom: 1; }
+.main { *zoom: 1; background: white; }
 .main:after { content: " "; display: table; clear: both; }
 
 .m-shops, .m-news { height: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-bottom: 125%; }

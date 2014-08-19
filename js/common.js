@@ -8,6 +8,24 @@ head.ready(function() {
 	}
 	banner();
 
+	$('.banner').on('click', function(){
+		$('html, body').animate({
+    	  scrollTop: $('.main').offset().top
+    	}, 500);
+	});
+
+	$('section[data-type="background"]').each(function(){
+        var bgobj = $(this); // assigning the object
+    
+        $(window).scroll(function() {
+            var yPos = -($(window).scrollTop() / bgobj.data('speed')); 
+            
+            var coords = ('50% '+ yPos + 'px');
+
+            bgobj.css({ backgroundPosition: coords });
+        }); 
+    });
+
 // menu
 
 	$('.js-menu-link').on('click', function(){
