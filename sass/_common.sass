@@ -30,6 +30,8 @@ h2
 	font-weight: normal
 	font-size: 24px
 	color: #333
+.out
+	position: relative	
 .clr
 	+clr
 .col50
@@ -102,18 +104,34 @@ h2
 .close
 	display: block
 	+s(close)
-	.menu-wrap &, .list-wrap &
+	.menu-wrap &
 		float: right
 		margin-top: 19px
 		margin-right: 23px
+	.list-wrap &
+		position: absolute
+		top: 19px
+		right: 23px	
 .menu
 	float: left
 	+clr
 	& > li
 		float: left
 		padding-left: 83px
+		+r(1560)
+			padding-left: 55px
+		+r(1366)
+			padding-left: 48px
+		+r(1280)
+			padding-left: 38px 			
 		&:first-child
 			padding-left: 60px
+			+r(1560)
+				padding-left: 55px
+			+r(1366)
+				padding-left: 48px
+			+r(1280)
+				padding-left: 38px			 	 
 		a
 			display: block
 			height: 86px
@@ -123,11 +141,23 @@ h2
 			+myriad-ls
 			text-transform: uppercase
 			text-decoration: none
+			+r(1560)
+				font-size: 26px
+			+r(1366)
+				font-size: 25px
+			+r(1280)
+				font-size: 20px		 		
 .socials
 	+clr
 	li
 		float: left
 		padding-left: 50px
+		+r(1560)
+			padding-left: 45px
+		+r(1366)
+			padding-left: 35px
+		+r(1280)
+			padding-left: 25px		 		
 .list-wrap
 	+clr
 	position: relative
@@ -141,26 +171,86 @@ h2
 		opacity: 1
 		visibility: visible
 .list
-	float: left
+	position: relative
 	+clr
-	li
+	& > li
 		float: left
-		a
-			display: block
-			padding: 0 50px
-			height: 86px
-			line-height: 86px 
-			+myriad-ls
-			color: #fff
-			text-decoration: none
-			text-transform: uppercase
-			font-size: 30px
-			+tr(background 200ms)
-			&:hover
-				background: #FFF
-				color: #333 	
-			&:first-child
+		&:first-child
+			.list__link
 				padding: 0 50px 0 60px
+				+r(1560)
+					padding: 0 35px 0 40px
+				+r(1280)
+					padding: 0 25px 0 30px
+		&.is-open
+			.list__link
+				background: #FFF
+				color: #333
+			.sublist
+				display: block	 						
+	&__link
+		display: block
+		padding: 0 50px
+		height: 86px
+		line-height: 86px 
+		+myriad-ls
+		color: #fff
+		text-decoration: none
+		text-transform: uppercase
+		font-size: 30px
+		+tr(background 200ms)
+		&:hover
+			background: #FFF
+			color: #333 	
+		+r(1560)
+			padding: 0 35px
+		+r(1440)
+			font-size: 25px
+		+r(1280)
+			padding: 0 25px
+			font-size: 21px 		 	 	
+		
+.sublist
+	display: none
+	position: absolute
+	top: 86px
+	left: 0
+	right: 0
+	background: #FFF
+	padding: 38px 0 
+	&__col
+		float: left
+		width: 50%
+		padding-left: 3%
+		+clr
+		+box
+	&__title
+		float: left
+		width: 22% 
+		font-size: 21px
+		text-transform: uppercase
+		color: #333
+	&__content
+		+clr
+		float: left
+		width: 78%	
+	&__links
+		float: left
+		width: 25%
+		li
+			a
+				display: inline-block
+				padding: 4px 12px
+				text-decoration: none
+				color: #333
+				font-size: 15px
+				text-transform: none
+				&:hover
+					background: #f05223
+					color: #fff
+				+r(1280)
+					font-size: 13px	  	 
+
 				
 // footer
 .footer

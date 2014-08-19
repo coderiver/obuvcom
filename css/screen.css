@@ -28,6 +28,8 @@ body { min-width: 1000px; font-family: "MyriadProRegular", Arial, sans-serif; -w
 
 h2 { font-weight: normal; font-size: 24px; color: #333333; }
 
+.out { position: relative; }
+
 .clr { *zoom: 1; }
 .clr:after { content: " "; display: table; clear: both; }
 
@@ -55,28 +57,59 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .menu-wrap.is-open { opacity: 1; visibility: visible; }
 
 .close { display: block; background: url('../img/icons-s02fb162709.png') 0 -56px no-repeat; width: 48px; height: 48px; }
-.menu-wrap .close, .list-wrap .close { float: right; margin-top: 19px; margin-right: 23px; }
+.menu-wrap .close { float: right; margin-top: 19px; margin-right: 23px; }
+.list-wrap .close { position: absolute; top: 19px; right: 23px; }
 
 .menu { float: left; *zoom: 1; }
 .menu:after { content: " "; display: table; clear: both; }
 .menu > li { float: left; padding-left: 83px; }
+@media only screen and (max-width: 1560px) { .menu > li { padding-left: 55px; } }
+@media only screen and (max-width: 1366px) { .menu > li { padding-left: 48px; } }
+@media only screen and (max-width: 1280px) { .menu > li { padding-left: 38px; } }
 .menu > li:first-child { padding-left: 60px; }
+@media only screen and (max-width: 1560px) { .menu > li:first-child { padding-left: 55px; } }
+@media only screen and (max-width: 1366px) { .menu > li:first-child { padding-left: 48px; } }
+@media only screen and (max-width: 1280px) { .menu > li:first-child { padding-left: 38px; } }
 .menu > li a { display: block; height: 86px; line-height: 86px; color: white; font-size: 30px; font-family: "MyriadProLightSemiExtended", Arial, sans-serif; text-transform: uppercase; text-decoration: none; }
+@media only screen and (max-width: 1560px) { .menu > li a { font-size: 26px; } }
+@media only screen and (max-width: 1366px) { .menu > li a { font-size: 25px; } }
+@media only screen and (max-width: 1280px) { .menu > li a { font-size: 20px; } }
 
 .socials { *zoom: 1; }
 .socials:after { content: " "; display: table; clear: both; }
 .socials li { float: left; padding-left: 50px; }
+@media only screen and (max-width: 1560px) { .socials li { padding-left: 45px; } }
+@media only screen and (max-width: 1366px) { .socials li { padding-left: 35px; } }
+@media only screen and (max-width: 1280px) { .socials li { padding-left: 25px; } }
 
 .list-wrap { *zoom: 1; position: relative; top: -86px; background: #f05223; z-index: 2; -moz-transition: opacity 250ms; -o-transition: opacity 250ms; -webkit-transition: opacity 250ms; transition: opacity 250ms; visibility: hidden; opacity: 0; }
 .list-wrap:after { content: " "; display: table; clear: both; }
 .list-wrap.is-open { opacity: 1; visibility: visible; }
 
-.list { float: left; *zoom: 1; }
+.list { position: relative; *zoom: 1; }
 .list:after { content: " "; display: table; clear: both; }
-.list li { float: left; }
-.list li a { display: block; padding: 0 50px; height: 86px; line-height: 86px; font-family: "MyriadProLightSemiExtended", Arial, sans-serif; color: white; text-decoration: none; text-transform: uppercase; font-size: 30px; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; }
-.list li a:hover { background: white; color: #333333; }
-.list li a:first-child { padding: 0 50px 0 60px; }
+.list > li { float: left; }
+.list > li:first-child .list__link { padding: 0 50px 0 60px; }
+@media only screen and (max-width: 1560px) { .list > li:first-child .list__link { padding: 0 35px 0 40px; } }
+@media only screen and (max-width: 1280px) { .list > li:first-child .list__link { padding: 0 25px 0 30px; } }
+.list > li.is-open .list__link { background: white; color: #333333; }
+.list > li.is-open .sublist { display: block; }
+.list__link { display: block; padding: 0 50px; height: 86px; line-height: 86px; font-family: "MyriadProLightSemiExtended", Arial, sans-serif; color: white; text-decoration: none; text-transform: uppercase; font-size: 30px; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; }
+.list__link:hover { background: white; color: #333333; }
+@media only screen and (max-width: 1560px) { .list__link { padding: 0 35px; } }
+@media only screen and (max-width: 1440px) { .list__link { font-size: 25px; } }
+@media only screen and (max-width: 1280px) { .list__link { padding: 0 25px; font-size: 21px; } }
+
+.sublist { display: none; position: absolute; top: 86px; left: 0; right: 0; background: white; padding: 38px 0; }
+.sublist__col { float: left; width: 50%; padding-left: 3%; *zoom: 1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.sublist__col:after { content: " "; display: table; clear: both; }
+.sublist__title { float: left; width: 22%; font-size: 21px; text-transform: uppercase; color: #333333; }
+.sublist__content { *zoom: 1; float: left; width: 78%; }
+.sublist__content:after { content: " "; display: table; clear: both; }
+.sublist__links { float: left; width: 25%; }
+.sublist__links li a { display: inline-block; padding: 4px 12px; text-decoration: none; color: #333333; font-size: 15px; text-transform: none; }
+.sublist__links li a:hover { background: #f05223; color: white; }
+@media only screen and (max-width: 1280px) { .sublist__links li a { font-size: 13px; } }
 
 .footer { height: 86px; background: #333333; padding: 0 45px 0 30px; }
 .footer__menu { float: left; width: 50%; }

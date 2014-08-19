@@ -26,6 +26,18 @@ head.ready(function() {
 		$(this).parent('.list-wrap').removeClass('is-open');
 	});	
 
+// sublist
+	
+	//$('.sublist').hide();
+	$('.list li').hover(
+		function(){
+			$(this).addClass('is-open');
+		},
+		function(){
+			$(this).removeClass('is-open');
+		}
+	);
+
 // yandex map
     ymaps.ready(function () {
     var myMap = new ymaps.Map('YMapsID', {
