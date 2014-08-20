@@ -81,6 +81,35 @@ head.ready(function() {
         .add(myPlacemark1)
      });   
 
+// parallax
+
+	$('.parallax').parallax({
+            xparallax: '20px',
+            yparallax: '10px',
+            width: 2,
+            height: 1,
+            limitX: false,
+            mouseport: $(".lookbook")
+        });
+
+// mouseweel
+	
+	function scrollBanner(){
+		flag = 0;
+
+		$(window).scroll(function(){
+			if (!flag) {
+				
+				flag = 1;
+
+				$('html, body').animate({
+   				  scrollTop: $('.main').offset().top
+   				}, 500);
+			}
+		}); 
+	}
+	scrollBanner();
+
 // onload affect
 
 	function animLoad(){
