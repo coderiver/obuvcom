@@ -244,7 +244,7 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .m-video__btn:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
 .m-video__btn i { display: inline-block; vertical-align: middle; background: url('../img/icons-s35eebebb56.png') 0 -574px no-repeat; width: 39px; height: 42px; }
 
-.anim { opacity: 0; -ms-transform: scale(0.2); -webkit-transform: scale(0.2); transform: scale(0.2); -moz-transition: all 800ms; -o-transition: all 800ms; -webkit-transition: all 800ms; transition: all 800ms; }
+.anim { opacity: 0; -ms-transform: scale(0.2); -webkit-transform: scale(0.2); transform: scale(0.2); -moz-transition: all 800ms; -o-transition: all 800ms; -webkit-transition: all 800ms; transition: all 800ms; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .anim.is-loaded { opacity: 1; -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); }
 
 .anim1 { -moz-transform: translate(-100px, 0px); -ms-transform: translate(-100px, 0px); -webkit-transform: translate(-100px, 0px); transform: translate(-100px, 0px); }
