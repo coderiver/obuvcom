@@ -48,10 +48,10 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 
 .logo { float: left; position: relative; margin-top: 10px; margin-bottom: 10px; margin-right: 60px; }
 .logo a { float: left; background: url('../img/icons-s35eebebb56.png') 0 -349px no-repeat; width: 67px; height: 66px; }
-.logo p { float: left; margin-left: 13px; margin-top: 5px; font-size: 13px; color: white; font-weight: normal; }
+.logo p { float: left; margin-left: 13px; margin-top: 5px; font-size: 13px; text-transform: uppercase; color: white; font-weight: normal; }
 .out_index .logo { float: none; display: inline-block; vertical-align: middle; margin-top: 0; margin-right: 0; margin-left: 150px; }
 .out_index .logo a { background: url('../img/icons-s35eebebb56.png') 0 -144px no-repeat; width: 195px; height: 195px; }
-.out_index .logo p { margin-top: 10px; margin-left: 38px; font-size: 40px; font-family: "MyriadProLightSemiExtended", Arial, sans-serif; }
+.out_index .logo p { margin-top: 27px; margin-left: 38px; line-height: 1.2; font-size: 40px; font-family: "MyriadProLightSemiExtended", Arial, sans-serif; }
 
 .search { position: relative; float: right; margin-left: 28px; font-size: 0; }
 .search input[type="text"] { display: block; height: 86px; width: 314px; font-size: 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "MyriadProRegular", Arial, sans-serif; padding: 0 76px 0 38px; background: #4d4d4d; color: white; }
@@ -236,3 +236,14 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .m-video__btn { position: absolute; top: 50%; left: 50%; margin: -112px 0 0 -112px; width: 224px; height: 224px; border-radius: 50%; text-align: center; background: rgba(255, 255, 255, 0.5); z-index: 2; }
 .m-video__btn:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
 .m-video__btn i { display: inline-block; vertical-align: middle; background: url('../img/icons-s35eebebb56.png') 0 -574px no-repeat; width: 39px; height: 42px; }
+
+.anim { opacity: 0; -moz-transition: opacity 500ms; -o-transition: opacity 500ms; -webkit-transition: opacity 500ms; transition: opacity 500ms; }
+.anim.is-loaded { opacity: 1; }
+
+.anim2 { -webkit-transition-delay: 0.2s; -o-transition-delay: 0.2s; -moz-transition-delay: 0.2s; transition-delay: 0.2s; }
+
+.anim3 { -webkit-transition-delay: 0.4s; -o-transition-delay: 0.4s; -moz-transition-delay: 0.4s; transition-delay: 0.4s; }
+
+.anim4 { -webkit-transition-delay: 0.6s; -o-transition-delay: 0.6s; -moz-transition-delay: 0.6s; transition-delay: 0.6s; }
+
+.anim5 { -webkit-transition-delay: 0.8s; -o-transition-delay: 0.8s; -moz-transition-delay: 0.8s; transition-delay: 0.8s; }

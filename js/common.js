@@ -81,10 +81,33 @@ head.ready(function() {
         .add(myPlacemark1)
      });   
 
+// onload affect
+
+	function animLoad(){
+		var vPos = $(window).scrollTop(),
+			h = ($(window).height()/2);
+			start = $('.main').offset().top;
+
+		var start = (start - h);	
+
+		if (vPos >= start) {
+			$('.anim').addClass('is-loaded');
+		};
+	}
+	animLoad();
+
+
 // resize
 	
 	$(window).resize(function(){
 		banner();
 	});	
+
+// scroll
+	$(window).scroll(function(){
+		if ($('.main').length) {
+			animLoad();
+		};
+	});
 
 });

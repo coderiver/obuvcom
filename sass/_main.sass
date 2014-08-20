@@ -205,7 +205,34 @@
 		i
 			display: inline-block
 			vertical-align: middle
-			+s(play)			 
+			+s(play)
+
+// loading effects
+.anim
+	opacity: 0
+	+tr(opacity 500ms)
+	&.is-loaded
+		opacity: 1
+.anim2
+	-webkit-transition-delay: 0.2s
+	-o-transition-delay: 0.2s
+	-moz-transition-delay: 0.2s
+	transition-delay: 0.2s
+.anim3
+	-webkit-transition-delay: 0.4s
+	-o-transition-delay: 0.4s
+	-moz-transition-delay: 0.4s
+	transition-delay: 0.4s
+.anim4
+	-webkit-transition-delay: 0.6s
+	-o-transition-delay: 0.6s
+	-moz-transition-delay: 0.6s
+	transition-delay: 0.6s
+.anim5
+	-webkit-transition-delay: 0.8s
+	-o-transition-delay: 0.8s
+	-moz-transition-delay: 0.8s
+	transition-delay: 0.8s		
 
 
 
