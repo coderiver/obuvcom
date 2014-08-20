@@ -163,9 +163,10 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .footer__menu ul:after { content: " "; display: table; clear: both; }
 .footer__menu ul li { float: left; margin-left: 22px; margin-bottom: 3px; }
 .footer__menu ul li a { color: #989898; text-decoration: none; font-size: 13px; font-family: "PT Sans", sans-serif; }
-@media only screen and (max-width: 1366px) { .footer__menu ul li { margin-left: 10px; }
+@media only screen and (max-width: 1366px) { .footer__menu ul li { margin-left: 9px; }
   .footer__menu ul li a { font-size: 12px; } }
 @media only screen and (max-width: 1280px) { .footer__menu ul li a { font-size: 11px; } }
+@media only screen and (max-width: 1024px) { .footer__menu ul { padding-top: 7px; } }
 .footer__socials { float: right; *zoom: 1; }
 .footer__socials:after { content: " "; display: table; clear: both; }
 .footer__socials li { float: left; margin-left: 35px; }
@@ -209,10 +210,10 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .m-news__list li:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1780px) { .m-news__list { padding: 0 5%; } }
 .m-news__date { float: left; padding: 0 10px; margin-right: 10px; height: 29px; line-height: 29px; color: white; background: #f05223; }
-@media only screen and (max-width: 1560px) { .m-news__date { font-size: 13px; } }
+@media only screen and (max-width: 1560px) { .m-news__date { font-size: 13px; padding: 0 5px; } }
 @media only screen and (max-width: 1366px) { .m-news__date { padding: 0 5px; } }
-@media only screen and (max-width: 1280px) { .m-news__date { height: 25px; line-height: 25px; } }
-@media only screen and (max-width: 1024px) { .m-news__date { font-size: 12px; height: 24px; line-height: 24px; } }
+@media only screen and (max-width: 1280px) { .m-news__date { height: 25px; line-height: 25px; font-size: 11px; } }
+@media only screen and (max-width: 1024px) { .m-news__date { height: 24px; line-height: 24px; } }
 .m-news__link { display: block; padding-top: 5px; margin-bottom: 20px; font-family: "PT Sans", sans-serif; color: white; text-decoration: none; }
 @media only screen and (max-width: 1560px) { .m-news__link { font-size: 13px; margin-bottom: 15px; } }
 @media only screen and (max-width: 1366px) { .m-news__link { font-size: 12px; } }
