@@ -18,6 +18,8 @@
 =awesome
 	font-family: 'FontAwesome', Arial, sans-serif	
 
+//vars
+$orange: #f05223
 
 body
 	min-width: 1000px
@@ -53,9 +55,9 @@ h2
 // common blocks
 .header
 	background: #333
-	padding: 0 0 0 30px
 	&__topper
 		+clr
+		padding: 0 0 0 30px
 		.shops-select
 			float: left  
 .logo
@@ -199,7 +201,7 @@ h2
 			font-size: 50px
 			&.catalog-link
 				padding: 0 20px 0 40px
-				background: #f05223
+				background: $orange
 			&.actions-link
 				padding: 0 20px 0 30px
 				background: #333   
@@ -294,7 +296,7 @@ h2
 	+clr
 	position: relative
 	top: -86px 
-	background: #f05223
+	background: $orange
 	z-index: 2
 	+tr(opacity 250ms)
 	visibility: hidden
@@ -304,6 +306,7 @@ h2
 		visibility: visible
 .list
 	position: relative
+	background: $orange
 	+clr
 	& > li
 		float: left
@@ -378,12 +381,38 @@ h2
 				font-size: 15px
 				text-transform: none
 				&:hover
-					background: #f05223
+					background: $orange
 					color: #fff
 				+r(1280)
 					font-size: 13px	  	 
 
-				
+// breadcrumbs
+.breadcrumbs
+	+clr
+	margin: 0 32px
+	height: 70px
+	border-bottom: 1px solid #e7e7e7  
+	&__list
+		font-size: 0
+		height: 70px
+		line-height: 70px
+		li
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			padding-left: 25px
+			&:before
+				content: "\f105"
+				position: absolute
+				top: 0px
+				left: 0px
+				font-size: 13px
+				color: #9d9d9d
+			a
+				font-size: 13px
+				color: $orange
+				text-decoration: none
+				 			
 // footer
 .footer
 	position: relative

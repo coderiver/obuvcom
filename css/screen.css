@@ -41,8 +41,8 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 
 .date { font-size: 13px; color: #979797; }
 
-.header { background: #333333; padding: 0 0 0 30px; }
-.header__topper { *zoom: 1; }
+.header { background: #333333; }
+.header__topper { *zoom: 1; padding: 0 0 0 30px; }
 .header__topper:after { content: " "; display: table; clear: both; }
 .header__topper .shops-select { float: left; }
 
@@ -126,7 +126,7 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .list-wrap:after { content: " "; display: table; clear: both; }
 .list-wrap.is-open { opacity: 1; visibility: visible; }
 
-.list { position: relative; *zoom: 1; }
+.list { position: relative; background: #f05223; *zoom: 1; }
 .list:after { content: " "; display: table; clear: both; }
 .list > li { float: left; }
 .list > li:first-child .list__link { padding: 0 50px 0 60px; }
@@ -150,6 +150,13 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .sublist__links li a { display: inline-block; padding: 4px 12px; text-decoration: none; color: #333333; font-size: 15px; text-transform: none; }
 .sublist__links li a:hover { background: #f05223; color: white; }
 @media only screen and (max-width: 1280px) { .sublist__links li a { font-size: 13px; } }
+
+.breadcrumbs { *zoom: 1; margin: 0 32px; height: 70px; border-bottom: 1px solid #e7e7e7; }
+.breadcrumbs:after { content: " "; display: table; clear: both; }
+.breadcrumbs__list { font-size: 0; height: 70px; line-height: 70px; }
+.breadcrumbs__list li { position: relative; display: inline-block; vertical-align: middle; padding-left: 25px; }
+.breadcrumbs__list li:before { content: "\f105"; position: absolute; top: 0px; left: 0px; font-size: 13px; color: #9d9d9d; }
+.breadcrumbs__list li a { font-size: 13px; color: #f05223; text-decoration: none; }
 
 .footer { position: relative; *zoom: 1; height: 86px; background: #333333; padding: 0 45px 0 30px; }
 .footer:after { content: " "; display: table; clear: both; }
