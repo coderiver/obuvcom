@@ -254,11 +254,16 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .anim.is-loaded { opacity: 1; -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); }
 
 .anim1 { -moz-transform: translate(-100px, 0px); -ms-transform: translate(-100px, 0px); -webkit-transform: translate(-100px, 0px); transform: translate(-100px, 0px); }
+@media only screen and (max-width: 1024px) { .anim1 { -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); -webkit-transform: translate(0px, 0px); transform: translate(0px, 0px); } }
 
 .anim2 { -moz-transform: translate(200px, -50px); -ms-transform: translate(200px, -50px); -webkit-transform: translate(200px, -50px); transform: translate(200px, -50px); }
+@media only screen and (max-width: 1024px) { .anim2 { -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); -webkit-transform: translate(0px, 0px); transform: translate(0px, 0px); } }
 
 .anim3 { -moz-transform: translate(250px, 100px); -ms-transform: translate(250px, 100px); -webkit-transform: translate(250px, 100px); transform: translate(250px, 100px); }
+@media only screen and (max-width: 1024px) { .anim3 { -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); -webkit-transform: translate(0px, 0px); transform: translate(0px, 0px); } }
 
 .anim4 { -moz-transform: translate(-150px, 50px); -ms-transform: translate(-150px, 50px); -webkit-transform: translate(-150px, 50px); transform: translate(-150px, 50px); }
+@media only screen and (max-width: 1024px) { .anim4 { -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); -webkit-transform: translate(0px, 0px); transform: translate(0px, 0px); } }
 
 .anim5 { -moz-transform: translate(150px, 200px); -ms-transform: translate(150px, 200px); -webkit-transform: translate(150px, 200px); transform: translate(150px, 200px); }
+@media only screen and (max-width: 1024px) { .anim5 { -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); -webkit-transform: translate(0px, 0px); transform: translate(0px, 0px); } }
