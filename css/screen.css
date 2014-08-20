@@ -184,7 +184,7 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.main { *zoom: 1; background: white; }
+.main { *zoom: 1; background: white; overflow: hidden; }
 .main:after { content: " "; display: table; clear: both; }
 
 .m-shops, .m-news { height: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-bottom: 125%; }
@@ -244,13 +244,15 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .m-video__btn:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
 .m-video__btn i { display: inline-block; vertical-align: middle; background: url('../img/icons-s35eebebb56.png') 0 -574px no-repeat; width: 39px; height: 42px; }
 
-.anim { opacity: 0; -moz-transition: opacity 500ms; -o-transition: opacity 500ms; -webkit-transition: opacity 500ms; transition: opacity 500ms; }
-.anim.is-loaded { opacity: 1; }
+.anim { opacity: 0; -ms-transform: scale(0.2); -webkit-transform: scale(0.2); transform: scale(0.2); -moz-transition: all 800ms; -o-transition: all 800ms; -webkit-transition: all 800ms; transition: all 800ms; }
+.anim.is-loaded { opacity: 1; -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); }
 
-.anim2 { -webkit-transition-delay: 0.2s; -o-transition-delay: 0.2s; -moz-transition-delay: 0.2s; transition-delay: 0.2s; }
+.anim1 { -moz-transform: translate(-100px, 0px); -ms-transform: translate(-100px, 0px); -webkit-transform: translate(-100px, 0px); transform: translate(-100px, 0px); }
 
-.anim3 { -webkit-transition-delay: 0.4s; -o-transition-delay: 0.4s; -moz-transition-delay: 0.4s; transition-delay: 0.4s; }
+.anim2 { -moz-transform: translate(200px, 0px); -ms-transform: translate(200px, 0px); -webkit-transform: translate(200px, 0px); transform: translate(200px, 0px); }
 
-.anim4 { -webkit-transition-delay: 0.6s; -o-transition-delay: 0.6s; -moz-transition-delay: 0.6s; transition-delay: 0.6s; }
+.anim3 { -moz-transform: translate(250px, 100px); -ms-transform: translate(250px, 100px); -webkit-transform: translate(250px, 100px); transform: translate(250px, 100px); }
 
-.anim5 { -webkit-transition-delay: 0.8s; -o-transition-delay: 0.8s; -moz-transition-delay: 0.8s; transition-delay: 0.8s; }
+.anim4 { -moz-transform: translate(-150px, 50px); -ms-transform: translate(-150px, 50px); -webkit-transform: translate(-150px, 50px); transform: translate(-150px, 50px); }
+
+.anim5 { -moz-transform: translate(150px, 200px); -ms-transform: translate(150px, 200px); -webkit-transform: translate(150px, 200px); transform: translate(150px, 200px); }
