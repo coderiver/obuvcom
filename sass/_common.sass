@@ -1,19 +1,10 @@
 // fonts
-+font(MyriadProRegular, myriadpro-regular)
-=myriad
-	font-family: 'MyriadProRegular', Arial, sans-serif
-+font(MyriadProBold, myriadpro-bold)
-=myriad-b
-	font-family: 'MyriadProBold', Arial, sans-serif	
-+font(MyriadProLight, myriadpro-light)
-=myriad-l
-	font-family: 'MyriadProLight', Arial, sans-serif
-+font(MyriadProLightSemiExtended, myriadpro-lightsemiext)
-=myriad-ls
-	font-family: 'MyriadProLightSemiExtended', Arial, sans-serif
-+font(MyriadProSemibold, myriadpro-semibold)
-=myriad-sb
-	font-family: 'MyriadProSemibold', Arial, sans-serif	
+
+=ptsans
+	font-family: 'PT Sans', sans-serif
+=ptsansnarrow
+	font-family: 'PT Sans Narrow', sans-serif
+
 +font(FontAwesome, fontawesome-webfont)
 =awesome
 	font-family: 'FontAwesome', Arial, sans-serif	
@@ -23,7 +14,7 @@ $orange: #f05223
 
 body
 	min-width: 1000px
-	+myriad
+	+ptsans
 	+font-smoothing 
 	font-size: 15px 
 	line-height: 1.4
@@ -74,6 +65,7 @@ h2
 		margin-left: 13px
 		margin-top: 5px
 		font-size: 13px
+		+ptsansnarrow
 		text-transform: uppercase
 		color: #fff
 		font-weight: normal
@@ -90,8 +82,7 @@ h2
 			margin-top: 27px 
 			margin-left: 38px
 			line-height: 1.2
-			font-size: 40px	
-			+myriad-ls
+			font-size: 40px
 .search
 	position: relative
 	float: right
@@ -103,7 +94,7 @@ h2
 		width: 314px
 		font-size: 20px
 		+box
-		+myriad
+		+ptsans
 		padding: 0 76px 0 38px
 		background: #4d4d4d
 		color: #fff
@@ -126,7 +117,7 @@ h2
 		width: 215px
 		background: #4d4d4d
 		font-size: 15px
-		+myriad
+		+ptsans
 		color: #fff
 		+box
 		padding: 0 21px 
@@ -152,7 +143,7 @@ h2
 		text-transform: uppercase
 		cursor: pointer
 		p
-			+myriad-sb
+			+ptsans
 			font-size: 14px  
 		&:before
 			content: ""
@@ -197,7 +188,7 @@ h2
 			text-decoration: none
 			color: #fff
 			text-transform: uppercase
-			+myriad-ls
+			+ptsans
 			font-size: 50px
 			&.catalog-link
 				padding: 0 20px 0 40px
@@ -266,7 +257,7 @@ h2
 			line-height: 86px
 			color: #fff
 			font-size: 30px
-			+myriad-ls
+			+ptsans
 			text-transform: uppercase
 			text-decoration: none
 			+r(1560)
@@ -334,7 +325,7 @@ h2
 		padding: 0 50px
 		height: 86px
 		line-height: 86px 
-		+myriad-ls
+		+ptsans
 		color: #fff
 		text-decoration: none
 		text-transform: uppercase
@@ -418,7 +409,7 @@ h2
 			a
 				font-size: 13px
 				color: $orange
-				+myriad
+				+ptsans
 				text-decoration: none
 			&:first-child
 				&:before
@@ -449,7 +440,7 @@ h2
 					color: #989898
 					text-decoration: none
 					font-size: 13px
-					+myriad-l
+					+ptsans
 		+r(1366)
 			ul
 				li
