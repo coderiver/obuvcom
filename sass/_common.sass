@@ -252,6 +252,8 @@ h2
 	& > li
 		float: left
 		padding-left: 83px
+		+r(1780)
+			padding-left: 60px
 		+r(1560)
 			padding-left: 55px
 		+r(1366)
@@ -286,12 +288,12 @@ h2
 	li
 		float: left
 		padding-left: 50px
+		+r(1780)
+			padding-left: 40px
 		+r(1560)
-			padding-left: 45px
-		+r(1366)
-			padding-left: 35px
+			padding-left: 30px
 		+r(1280)
-			padding-left: 25px		 		
+			padding-left: 20px		 		
 .list-wrap
 	+clr
 	position: relative
@@ -405,13 +407,21 @@ h2
 				content: "\f105"
 				position: absolute
 				top: 0px
-				left: 0px
+				left: 10px
+				+fa
 				font-size: 13px
 				color: #9d9d9d
 			a
 				font-size: 13px
 				color: $orange
+				+myriad
 				text-decoration: none
+			&:first-child
+				&:before
+					content: ""
+			&:last-child
+				a
+					color: #9d9d9d			
 				 			
 // footer
 .footer
@@ -463,12 +473,14 @@ h2
 				margin-left: 30px							
 .v
 	display: inline-block
-	+s(v)				  								
+	+s(v)
+	&.v_white
+		+s(v-white)				  								
 .p
 	display: inline-block
 	+s(p)				  	 						
-
-
+	&.p_white
+		+s(p-white)
 
 
 
