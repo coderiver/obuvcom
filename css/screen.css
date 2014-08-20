@@ -103,14 +103,10 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .menu { float: left; *zoom: 1; }
 .menu:after { content: " "; display: table; clear: both; }
 .menu > li { float: left; padding-left: 83px; }
-@media only screen and (max-width: 1780px) { .menu > li { padding-left: 60px; } }
-@media only screen and (max-width: 1560px) { .menu > li { padding-left: 55px; } }
-@media only screen and (max-width: 1366px) { .menu > li { padding-left: 48px; } }
-@media only screen and (max-width: 1280px) { .menu > li { padding-left: 38px; } }
+@media only screen and (max-width: 1780px) { .menu > li { padding-left: 40px; } }
+@media only screen and (max-width: 1280px) { .menu > li { padding-left: 25px; } }
 .menu > li:first-child { padding-left: 60px; }
-@media only screen and (max-width: 1560px) { .menu > li:first-child { padding-left: 55px; } }
-@media only screen and (max-width: 1366px) { .menu > li:first-child { padding-left: 48px; } }
-@media only screen and (max-width: 1280px) { .menu > li:first-child { padding-left: 38px; } }
+@media only screen and (max-width: 1760px) { .menu > li:first-child { padding-left: 30px; } }
 .menu > li a { display: block; height: 86px; line-height: 86px; color: white; font-size: 30px; font-family: "MyriadProLightSemiExtended", Arial, sans-serif; text-transform: uppercase; text-decoration: none; }
 @media only screen and (max-width: 1560px) { .menu > li a { font-size: 26px; } }
 @media only screen and (max-width: 1366px) { .menu > li a { font-size: 25px; } }
@@ -119,9 +115,13 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .socials { *zoom: 1; }
 .socials:after { content: " "; display: table; clear: both; }
 .socials li { float: left; padding-left: 50px; }
-@media only screen and (max-width: 1780px) { .socials li { padding-left: 40px; } }
-@media only screen and (max-width: 1560px) { .socials li { padding-left: 30px; } }
-@media only screen and (max-width: 1280px) { .socials li { padding-left: 20px; } }
+.socials li a img { position: relative; }
+@media only screen and (max-width: 1780px) { .socials li { padding-left: 35px; } }
+@media only screen and (max-width: 1560px) { .socials li { padding-left: 30px; }
+  .socials li a img { height: 25px; top: 2px; } }
+@media only screen and (max-width: 1366px) { .socials li { padding-left: 23px; } }
+@media only screen and (max-width: 1280px) { .socials li { padding-left: 15px; }
+  .socials li a img { height: 20px; } }
 
 .list-wrap { *zoom: 1; position: relative; top: -86px; background: #f05223; z-index: 2; -moz-transition: opacity 250ms; -o-transition: opacity 250ms; -webkit-transition: opacity 250ms; transition: opacity 250ms; visibility: hidden; opacity: 0; }
 .list-wrap:after { content: " "; display: table; clear: both; }
