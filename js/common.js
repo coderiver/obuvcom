@@ -100,6 +100,9 @@ head.ready(function() {
             }
           
     });
+    $('.js-parallax').mouseleave(function(){
+    	$(this).css({'left': 0, 'top':0});
+    });
 
 // mouseweel
 	
