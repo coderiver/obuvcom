@@ -120,3 +120,38 @@
     background: #d9d9d9 url(../img/heart.png) 50% 50% no-repeat
     color: #fff
     font-size: 12px
+.similar
+    margin-bottom: 45px
+    &__title
+        height: 65px
+        line-height: 65px
+        margin-bottom: 22px
+        padding: 0 50px 
+        background: #e7e7e7
+        font-size: 30px
+        color: #333
+    &__list
+        padding: 0 28px 
+        +justify
+        li
+            +justify-child
+            width: 20%
+            
+// block
+.block
+    position: relative
+    &__likes
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 2
+    &__img
+        display: block
+        height: 250px
+        text-align: center
+        vertical-align: bottom
+        img
+            display: inline-block
+            vertical-align: bottom
+            max-width: 100%
+            max-height: 100%                       
