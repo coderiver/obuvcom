@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>item</title>
+	<title>catalog</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -193,6 +193,11 @@
 	</header>
 	<!-- END header -->
 	<div class="container">
+		<!-- BEGIN sidebar -->
+		<aside class="sidebar">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore mollitia, quis maxime in aut nisi voluptatibus natus rem perferendis voluptates repudiandae quas reiciendis sequi sed accusamus quasi unde soluta amet?
+		</aside>
+		<!-- END sidebar -->
 		<!-- BEGIN main -->
 		<section class="main">
 			<div class="main__topper">
@@ -204,103 +209,24 @@
 						<li class="fa"><a href="#">Балетки</a></li>
 					</ul>
 				</nav>
-				<a href="#" class="back">назад в каталог</a>
+				<nav class="pagination">
+					<ul class="pagination__list">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li>...</li>
+						<li><a href="#">16</a></li>
+					</ul>
+					<div class="pagination__next">
+						<a href="#"></a>
+					</div>
+				</nav>
 			</div>
 			<div class="content">
-				<div class="item">
-					<div class="item__like">
-						<div class="percent">
-							<i class="percent-icon"></i>
-						</div>
-						<div class="like">239</div>
-					</div>
-					<div class="item__gallery">
-						<div class="fotorama"
-						data-nav="thumbs"
-						data-thumbwidth="74"
-						data-thumbheight="74"
-						>
-							<img src="img/pict3.jpg" alt="">
-							<img src="img/pict3.jpg" alt="">
-							<img src="img/pict3.jpg" alt="">
-						</div>
-					</div>
-					<div class="item__info">
-						<div class="item__topper">
-							<div class="item__title">
-								<h1>Балетки Stesso</h1>
-								<div class="artikul">Артикул: 62W-009KH-1A</div>
-							</div>
-							<div class="price">
-								<p>799.-</p>
-								<span>999.-</span>
-							</div>
-						</div>
-						<div class="item__size">
-							<p>Доступные размеры</p>
-							<ul>
-								<li>36</li>
-								<li>37</li>
-								<li>38</li>
-								<li>39</li>
-								<li>40</li>
-								<li>41</li>
-							</ul>
-						</div>
-						<div class="tabs js-tab-group">
-							<ul class="tabs__nav js-tab">
-								<li class="is-active"><a href="js-tab1" class="tabs__link is-active">Описание</a></li>
-								<li><a href="js-tab2" class="tabs__link">Где купить?</a></li>
-								<li><a href="js-tab3" class="tabs__link">Отзывы</a></li>
-							</ul>
-							<ul class="tabs__container">
-								<li class="tabs__cont js-tab-cont js-tab1">
-									<ul class="table-list">
-										<li>
-											<div>Внешний материал</div>
-											<div>Искусственная кожа</div>
-										</li>
-										<li>
-											<div>Внутренний материал</div>
-											<div>Искусственная кожа</div>
-										</li>
-										<li>
-											<div>Цвет</div>
-											<div>Комбинированный</div>
-										</li>
-										<li>
-											<div>Тип каблука</div>
-											<div>Широкий</div>
-										</li>
-										<li>
-											<div>Высота каблука</div>
-											<div>до 3 см</div>
-										</li>
-										<li>
-											<div>Сезон</div>
-											<div>Всесезон</div>
-										</li>
-										<li>
-											<div>Коллекция</div>
-											<div>Весна-лето 2014</div>
-										</li>
-										<li>
-											<div>Бренд</div>
-											<div>Stesso</div>
-										</li>
-									</ul>
-								</li>
-								<li class="js-tab-cont js-tab2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ratione error facere possimus necessitatibus, numquam voluptatem modi nesciunt laudantium nobis a quo, odio distinctio unde fugiat, iste, accusantium doloribus. Tempore.</li>
-								<li class="js-tab-cont js-tab3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis distinctio, odio eligendi suscipit reprehenderit atque dolor soluta odit eos mollitia voluptates consequatur obcaecati nisi similique ipsum molestiae sit sequi quam!</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="similar">
-				<div class="similar__title">Идеальное сочетание</div>
-				<ul class="similar__list">
-					<li class="similar__item">
+				<ul class="catalog">
+					<li class="catalog__item">
 						<div class="block">
 							<div class="block__likes">
 								<div class="like">239</div>
@@ -319,10 +245,10 @@
 							</div>
 						</div>
 					</li>
-					<li class="similar__item">
+					<li class="catalog__item">
 						<div class="block">
 							<div class="block__likes">
-								<div class="like like_orange">239</div>
+								<div class="like">239</div>
 							</div>
 							<a href="#" class="block__img">
 								<img src="img/pict4.jpg" alt="">
@@ -338,7 +264,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="similar__item">
+					<li class="catalog__item">
 						<div class="block">
 							<div class="block__likes">
 								<div class="percent"><i class="percent-icon"></i></div>
@@ -358,7 +284,161 @@
 							</div>
 						</div>
 					</li>
-					<li class="similar__item">
+					<li class="catalog__item">
+						<div class="block">
+							<div class="block__likes">
+								<div class="like">239</div>
+							</div>
+							<a href="#" class="block__img">
+								<img src="img/pict4.jpg" alt="">
+							</a>
+							<div class="block__footer">
+								<div class="block__left">
+									<a href="#" class="block__link">Балетки Dodgio</a>
+									<div class="artikul">Артикул: 62W-009KH-1A</div>
+								</div>
+								<div class="block__right">
+									<div class="price">799.-</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="catalog__item">
+						<div class="block">
+							<div class="block__likes">
+								<div class="like">239</div>
+							</div>
+							<a href="#" class="block__img">
+								<img src="img/pict4.jpg" alt="">
+							</a>
+							<div class="block__footer">
+								<div class="block__left">
+									<a href="#" class="block__link">Балетки Dodgio</a>
+									<div class="artikul">Артикул: 62W-009KH-1A</div>
+								</div>
+								<div class="block__right">
+									<div class="price">799.-</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="catalog__item">
+						<div class="block">
+							<div class="block__likes">
+								<div class="percent"><i class="percent-icon"></i></div>
+								<div class="like"></div>
+							</div>
+							<a href="#" class="block__img">
+								<img src="img/pict4.jpg" alt="">
+							</a>
+							<div class="block__footer">
+								<div class="block__left">
+									<a href="#" class="block__link">Балетки Dodgio</a>
+									<div class="artikul">Артикул: 62W-009KH-1A</div>
+								</div>
+								<div class="block__right">
+									<div class="price">799.-</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="catalog__item">
+						<div class="block">
+							<div class="block__likes">
+								<div class="like">239</div>
+							</div>
+							<a href="#" class="block__img">
+								<img src="img/pict4.jpg" alt="">
+							</a>
+							<div class="block__footer">
+								<div class="block__left">
+									<a href="#" class="block__link">Балетки Dodgio</a>
+									<div class="artikul">Артикул: 62W-009KH-1A</div>
+								</div>
+								<div class="block__right">
+									<div class="price">799.-</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="catalog__item">
+						<div class="block">
+							<div class="block__likes">
+								<div class="like">239</div>
+							</div>
+							<a href="#" class="block__img">
+								<img src="img/pict4.jpg" alt="">
+							</a>
+							<div class="block__footer">
+								<div class="block__left">
+									<a href="#" class="block__link">Балетки Dodgio</a>
+									<div class="artikul">Артикул: 62W-009KH-1A</div>
+								</div>
+								<div class="block__right">
+									<div class="price">799.-</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="catalog__item">
+						<div class="block">
+							<div class="block__likes">
+								<div class="percent"><i class="percent-icon"></i></div>
+								<div class="like"></div>
+							</div>
+							<a href="#" class="block__img">
+								<img src="img/pict4.jpg" alt="">
+							</a>
+							<div class="block__footer">
+								<div class="block__left">
+									<a href="#" class="block__link">Балетки Dodgio</a>
+									<div class="artikul">Артикул: 62W-009KH-1A</div>
+								</div>
+								<div class="block__right">
+									<div class="price">799.-</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="catalog__item">
+						<div class="block">
+							<div class="block__likes">
+								<div class="like">239</div>
+							</div>
+							<a href="#" class="block__img">
+								<img src="img/pict4.jpg" alt="">
+							</a>
+							<div class="block__footer">
+								<div class="block__left">
+									<a href="#" class="block__link">Балетки Dodgio</a>
+									<div class="artikul">Артикул: 62W-009KH-1A</div>
+								</div>
+								<div class="block__right">
+									<div class="price">799.-</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="catalog__item">
+						<div class="block">
+							<div class="block__likes">
+								<div class="like">239</div>
+							</div>
+							<a href="#" class="block__img">
+								<img src="img/pict4.jpg" alt="">
+							</a>
+							<div class="block__footer">
+								<div class="block__left">
+									<a href="#" class="block__link">Балетки Dodgio</a>
+									<div class="artikul">Артикул: 62W-009KH-1A</div>
+								</div>
+								<div class="block__right">
+									<div class="price">799.-</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="catalog__item">
 						<div class="block">
 							<div class="block__likes">
 								<div class="percent"><i class="percent-icon"></i></div>

@@ -120,7 +120,10 @@ head.ready(function() {
 			}
 		}); 
 	}
-	scrollBanner();
+	if ($('.out_index').length) {
+		scrollBanner();
+	};
+	
 
 // onload affect
 
