@@ -11,10 +11,84 @@
         z-index: 10
     &__gallery
         float: left
-        width: 560px
+        width: 50%
+        padding-right: 5%
+        margin-bottom: 50px
         padding-left: 130px
+        +box
     &__info
-        float: left          
+        float: right
+        width: 47%
+    &__topper
+        +clr
+        margin-bottom: 40px
+    &__title
+        float: left
+        h1
+            font-size: 30px
+            color: #333
+            font-weight: normal
+        span
+            font-size: 13px
+            color: #9d9d9d
+    &__size
+        margin-bottom: 45px
+        & > p
+            margin-bottom: 5px
+            font-size: 15px
+            color: #888
+        ul
+            +clr
+            li
+                float: left
+                margin-right: 6px
+                width: 46px
+                height: 46px
+                line-height: 46px
+                background: #d9d9d9
+                text-align: center
+                +ptsansnarrow
+                color: #333
+                font-size: 24px
+.tabs
+    position: relative
+    width: 545px
+    &__nav
+        +clr
+        li
+            float: left
+            margin-left: 6px
+            &:first-child
+                margin-left: 0
+            a
+                display: block
+                padding: 0 30px
+                height: 46px
+                line-height: 46px
+                text-decoration: none
+                color: #fff
+                font-size: 21px
+                text-transform: uppercase
+                background: #333
+                &.is-active
+                    background: $orange
+    &__container
+        padding: 25px 6px                  
+.table-list
+    display: table
+    width: 100%
+    border-collapse: collapse 
+    li
+        display: table-row
+        border-bottom: 1px dotted #e7e7e7 
+        & > div
+            display: table-cell
+            width: 60%
+            padding: 2px 0 
+            color: #333 
+            &:first-child
+                width: 40%
+                color: #888 
 .percent
     width: 54px
     height: 54px

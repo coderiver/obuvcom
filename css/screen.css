@@ -288,8 +288,32 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .item { position: relative; *zoom: 1; }
 .item:after { content: " "; display: table; clear: both; }
 .item__like { position: absolute; top: 0; left: 0; width: 54px; margin-right: 5%; z-index: 10; }
-.item__gallery { float: left; width: 560px; padding-left: 130px; }
-.item__info { float: left; }
+.item__gallery { float: left; width: 50%; padding-right: 5%; margin-bottom: 50px; padding-left: 130px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.item__info { float: right; width: 47%; }
+.item__topper { *zoom: 1; margin-bottom: 40px; }
+.item__topper:after { content: " "; display: table; clear: both; }
+.item__title { float: left; }
+.item__title h1 { font-size: 30px; color: #333333; font-weight: normal; }
+.item__title span { font-size: 13px; color: #9d9d9d; }
+.item__size { margin-bottom: 45px; }
+.item__size > p { margin-bottom: 5px; font-size: 15px; color: #888888; }
+.item__size ul { *zoom: 1; }
+.item__size ul:after { content: " "; display: table; clear: both; }
+.item__size ul li { float: left; margin-right: 6px; width: 46px; height: 46px; line-height: 46px; background: #d9d9d9; text-align: center; font-family: "PT Sans Narrow", sans-serif; color: #333333; font-size: 24px; }
+
+.tabs { position: relative; width: 545px; }
+.tabs__nav { *zoom: 1; }
+.tabs__nav:after { content: " "; display: table; clear: both; }
+.tabs__nav li { float: left; margin-left: 6px; }
+.tabs__nav li:first-child { margin-left: 0; }
+.tabs__nav li a { display: block; padding: 0 30px; height: 46px; line-height: 46px; text-decoration: none; color: white; font-size: 21px; text-transform: uppercase; background: #333333; }
+.tabs__nav li a.is-active { background: #f05223; }
+.tabs__container { padding: 25px 6px; }
+
+.table-list { display: table; width: 100%; border-collapse: collapse; }
+.table-list li { display: table-row; border-bottom: 1px dotted #e7e7e7; }
+.table-list li > div { display: table-cell; width: 60%; padding: 2px 0; color: #333333; }
+.table-list li > div:first-child { width: 40%; color: #888888; }
 
 .percent { width: 54px; height: 54px; line-height: 54px; background: #f05223; text-align: center; font-size: 0; }
 
