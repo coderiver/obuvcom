@@ -7,6 +7,7 @@
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" media="screen" href="css/fotorama.css" >
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<link rel="stylesheet" media="screen" href="css/font-awesome.min.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -235,17 +236,22 @@
 		</div>
 		<div class="col50">
 			<div class="m-actions anim anim3">
-				<div class="m-actions__title">Акции</div>
-				<div class="m-actions__content">
-					<h2>Акция "Дефиле" в магазинах "Обувь Ком"</h2>
-					<div class="date">с 01.06.2014г. по 15.07.2014г.</div>
-					<article>
-						<img src="img/pict1.jpg" alt="">
-						<p>Условия акции: При каждой покупке, вне зависимости от суммы чека, в магазинах «Обувь Ком» выдается купон на скидку в сети «Дефи*ле» </p>
-						<p>Скидка 20% предоставляется в магазинах «Обувь Ком» только при совершении покупки на сумму чека от 500 рублей и предъявлении купона из сети магазинов «Дефи*ле». </p>
-					</article>
+				<div class="m-actions__parallax js-parallax">
+					<div class="overlay"></div>
+					<div class="m-actions__in">
+						<div class="m-actions__title">Акции</div>
+						<div class="m-actions__content">
+							<h2>Акция "Дефиле" в магазинах "Обувь Ком"</h2>
+							<div class="date">с 01.06.2014г. по 15.07.2014г.</div>
+							<article>
+								<img src="img/pict1.png" alt="">
+								<p>Условия акции: При каждой покупке, вне зависимости от суммы чека, в магазинах «Обувь Ком» выдается купон на скидку в сети «Дефи*ле» </p>
+								<p>Скидка 20% предоставляется в магазинах «Обувь Ком» только при совершении покупки на сумму чека от 500 рублей и предъявлении купона из сети магазинов «Дефи*ле». </p>
+							</article>
+						</div>
+						<a href="#" class="more">все новости</a>
+					</div>
 				</div>
-				<a href="#" class="more">все новости</a>
 			</div>
 		</div>
 		<div class="col50">
@@ -257,8 +263,10 @@
 		<div class="col50">
 			<div class="lookbook anim anim5">
 				<a href="#">
-					<div class="overlay"></div>
-					<img class="parallax" src="img/lookbook.jpg" alt="">
+					<div class="parallax-wrap js-parallax">
+						<div class="overlay"></div>
+						<img class="parallax" src="img/lookbook.jpg" alt="">
+					</div>
 				</a>
 			</div>
 		</div>

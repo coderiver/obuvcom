@@ -41,7 +41,9 @@ h2
 	width: 25%	
 .date
 	font-size: 13px
-	color: #979797 
+	color: #979797
+.content
+	padding: 0 32px 	 
 
 // common blocks
 .header
@@ -385,10 +387,7 @@ h2
 
 // breadcrumbs
 .breadcrumbs
-	+clr
-	margin: 0 32px
-	height: 70px
-	border-bottom: 1px solid #e7e7e7  
+	float: left 
 	&__list
 		font-size: 0
 		height: 70px
@@ -411,13 +410,29 @@ h2
 				color: $orange
 				+ptsans
 				text-decoration: none
+				&:hover
+					text-decoration: underline
 			&:first-child
+				padding-left: 0
 				&:before
 					content: ""
 			&:last-child
 				a
-					color: #9d9d9d			
-				 			
+					color: #9d9d9d
+.back
+	position: relative
+	float: right
+	margin-top: 15px
+	text-decoration: none
+	padding-left: 38px
+	color: $orange
+	font-size: 24px 								
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		+s(back)		 			
 // footer
 .footer
 	position: relative

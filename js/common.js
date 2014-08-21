@@ -81,16 +81,25 @@ head.ready(function() {
         .add(myPlacemark1)
      });   
 
-// parallax
+// parallax affect
 
-	$('.parallax').parallax({
-            xparallax: '20px',
-            yparallax: '10px',
-            width: 2,
-            height: 1,
-            limitX: false,
-            mouseport: $(".lookbook")
-        });
+	$('.js-parallax').on('mousemove', function(e) {
+              var winW = $(window).width(),
+          winH = $(window).height(),
+          xCenter = winW/2,
+          yCenter = winH/2,
+          x = e.pageX,
+          y = e.pageY;
+          
+          xProc = (x - xCenter) /xCenter,
+          yProc = (y - yCenter) /yCenter;
+          
+
+            if($(this).find('img').size() == 1){
+              $(this).css({'left':10-10*xProc,'top': 5-10*yProc})
+            }
+          
+    });
 
 // mouseweel
 	
