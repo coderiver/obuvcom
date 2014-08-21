@@ -31,6 +31,16 @@
         span
             font-size: 13px
             color: #9d9d9d
+    &__price
+        float: right
+        padding-right: 40px
+        font-size: 30px
+        color: $orange
+        line-height: 1 
+        text-align: right
+        span
+            font-size: 13px
+            color: #333         
     &__size
         margin-bottom: 45px
         & > p
@@ -80,7 +90,9 @@
     border-collapse: collapse 
     li
         display: table-row
-        border-bottom: 1px dotted #e7e7e7 
+        border-top: 1px dotted #e7e7e7
+        &:first-child
+            border-top: none  
         & > div
             display: table-cell
             width: 60%

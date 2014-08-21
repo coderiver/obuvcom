@@ -295,6 +295,8 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .item__title { float: left; }
 .item__title h1 { font-size: 30px; color: #333333; font-weight: normal; }
 .item__title span { font-size: 13px; color: #9d9d9d; }
+.item__price { float: right; padding-right: 40px; font-size: 30px; color: #f05223; line-height: 1; text-align: right; }
+.item__price span { font-size: 13px; color: #333333; }
 .item__size { margin-bottom: 45px; }
 .item__size > p { margin-bottom: 5px; font-size: 15px; color: #888888; }
 .item__size ul { *zoom: 1; }
@@ -311,7 +313,8 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .tabs__container { padding: 25px 6px; }
 
 .table-list { display: table; width: 100%; border-collapse: collapse; }
-.table-list li { display: table-row; border-bottom: 1px dotted #e7e7e7; }
+.table-list li { display: table-row; border-top: 1px dotted #e7e7e7; }
+.table-list li:first-child { border-top: none; }
 .table-list li > div { display: table-cell; width: 60%; padding: 2px 0; color: #333333; }
 .table-list li > div:first-child { width: 40%; color: #888888; }
 
