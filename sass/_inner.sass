@@ -27,20 +27,7 @@
         h1
             font-size: 30px
             color: #333
-            font-weight: normal
-        span
-            font-size: 13px
-            color: #9d9d9d
-    &__price
-        float: right
-        padding-right: 40px
-        font-size: 30px
-        color: $orange
-        line-height: 1 
-        text-align: right
-        span
-            font-size: 13px
-            color: #333         
+            font-weight: normal        
     &__size
         margin-bottom: 45px
         & > p
@@ -60,9 +47,25 @@
                 +ptsansnarrow
                 color: #333
                 font-size: 24px
+.price
+    float: right
+    font-size: 24px
+    color: $orange
+    line-height: 1 
+    text-align: right
+    .item &
+        font-size: 30px
+        padding-right: 40px
+    span
+        font-size: 13px
+        color: #333
+    +r(1280)
+        font-size: 20px                    
 .tabs
     position: relative
     width: 545px
+    +r(1280)
+        width: 100% 
     &__nav
         +clr
         li
@@ -70,18 +73,23 @@
             margin-left: 6px
             &:first-child
                 margin-left: 0
-            a
-                display: block
-                padding: 0 30px
-                height: 46px
-                line-height: 46px
-                text-decoration: none
-                color: #fff
-                font-size: 21px
-                text-transform: uppercase
-                background: #333
-                &.is-active
-                    background: $orange
+    &__link
+        display: block
+        padding: 0 30px
+        height: 46px
+        line-height: 46px
+        text-decoration: none
+        color: #fff
+        font-size: 21px
+        text-transform: uppercase
+        background: #333
+        &.is-active
+            background: $orange
+        +r(1280)
+            padding: 0 25px
+            height: 36px
+            line-height: 36px
+            font-size: 18px      
     &__container
         padding: 25px 6px                  
 .table-list
@@ -120,6 +128,8 @@
     background: #d9d9d9 url(../img/heart.png) 50% 50% no-repeat
     color: #fff
     font-size: 12px
+    &.like_orange
+        background: #d9d9d9 url(../img/heart-orange.png) 50% 50% no-repeat
 .similar
     margin-bottom: 45px
     &__title
@@ -136,7 +146,9 @@
         li
             +justify-child
             width: 20%
-            
+.artikul
+    font-size: 13px
+    color: #9d9d9d             
 // block
 .block
     position: relative
@@ -148,10 +160,30 @@
     &__img
         display: block
         height: 250px
+        line-height: 250px
+        margin-bottom: 45px 
         text-align: center
         vertical-align: bottom
         img
             display: inline-block
             vertical-align: bottom
             max-width: 100%
-            max-height: 100%                       
+            max-height: 100%
+        +r(1280)
+            height: 200px
+            line-height: 200px    
+    &__footer
+        +clr
+    &__left
+        float: left
+        width: 80%
+    &__right
+        float: right
+        width: 20%                                   
+    &__link
+        font-size: 24px
+        color: #333
+        text-decoration: none
+        +r(1280)
+            font-size: 20px
+            
