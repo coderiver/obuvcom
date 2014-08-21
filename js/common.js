@@ -96,7 +96,7 @@ head.ready(function() {
           
 
             if($(this).find('img').size() == 1){
-              $(this).css({'left':10-10*xProc,'top': 5-10*yProc})
+              $(this).css({'left':7-7*xProc,'top': 7-7*yProc})
             }
           
     });
