@@ -91,6 +91,9 @@ h2
 		text-transform: uppercase
 		color: #fff
 		font-weight: normal
+	.header &
+		+r(1440)
+			margin-right: 15px	
 	.out_index &
 		float: none
 		display: inline-block
@@ -128,6 +131,13 @@ h2
 		top: 33px
 		right: 39px
 		+s(search)
+	+r(1280)
+		margin-left: 10px
+		input[type="text"]
+			width: 210px
+			padding: 0 42px 0 20px
+		button
+			right: 24px	 	
 .check
 	position: relative
 	padding: 20px 0
@@ -152,7 +162,16 @@ h2
 		width: 130px
 		background: #1e1e1e
 		color: #fff
-		font-size: 15px  		  							
+		font-size: 15px
+	+r(1280)
+		input[type="text"]
+			width: 165px
+			padding: 0 5px
+			+placeholder
+				font-size: 13px
+		button
+			width: 94px
+			font-size: 14px 	 	  		  							
 .shops-select
 	position: relative
 	padding-top: 18px
@@ -178,7 +197,14 @@ h2
 			position: absolute
 			top: 20px
 			right: 0
-			+s(select)	
+			+s(select)
+	+r(1280)
+		.shops-select__title
+			padding-left: 55px
+			padding-right: 45px
+			font-size: 20px
+			p
+				font-size: 11px			
 .banner
 	position: relative
 	background-attachment: fixed
