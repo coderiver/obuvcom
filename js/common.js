@@ -59,13 +59,13 @@ head.ready(function() {
 // yandex map
     ymaps.ready(function () {
     var myMap = new ymaps.Map('YMapsID', {
-        center: [55.854553, 37.67162],
+        center: [55.751077,37.618346],
         zoom: 12,
         controls: []
     }),
 
         // Создаем метку с помощью вспомогательного класса.
-        myPlacemark1 = new ymaps.Placemark([55.854553, 37.67162], {
+        myPlacemark1 = new ymaps.Placemark([55.751077,37.618346], {
             // Свойства.
             // Содержимое иконки, балуна и хинта.
             iconContent: '',
@@ -178,6 +178,17 @@ head.ready(function() {
     $( ".range-slider__min" ).val( $( "#slider-range" ).slider( "values", 0 ));
     $( ".range-slider__max" ).val( $( "#slider-range" ).slider( "values", 1 ));
 
+
+// slick slider
+	
+	if ($('.slick').length) {
+		$('.slick').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+		});
+	};
+	
 
 // resize
 	

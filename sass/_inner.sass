@@ -431,4 +431,95 @@
             input
                 width: 60%
             button
-                width: 40%             
+                width: 40%
+               
+// aside-menu
+.aside-menu
+    padding-top: 5px
+    a
+        display: block
+        padding: 4px 10% 9px
+        text-decoration: none
+        font-size: 24px
+        color: #fff
+        &:hover
+            background: #4d4d4d
+        &.is-active
+            background: $orange
+.shops
+    &__topper
+        +clr
+        margin-bottom: 10px
+        h1
+            float: left
+        .shops-select
+            float: right
+            padding-top: 0
+            .shops-select__title
+                color: #333
+                &:before
+                    +s(shops-dark)
+                &:after
+                    +s(select-dark)
+    &__map
+        position: relative
+        margin: 0 -32px 0px                                             
+    &__map-inner
+        height: 445px
+.magazine
+    padding: 50px 18px
+    +justify
+    +r(1280)
+        padding: 32px 0       
+    &__item
+        +justify-child
+        width: 30%
+        padding-bottom: 10px
+        border-bottom: 1px solid #e7e7e7
+        margin-bottom: 30px  
+    &__title
+        text-align: left
+        margin-bottom: 20px
+        font-size: 24px
+        color: #333
+    &__info
+        text-align: left
+        font-size: 13px
+        li
+            margin-bottom: 5px
+        i
+            display: inline-block
+            color: #bebebe
+            font-size: 17px
+            margin-right: 5px         
+.slick-prev, .slick-next
+    position: absolute
+    top: 50%
+    left: 0
+    margin-top: -27px
+    width: 54px
+    height: 54px
+    background-color: rgba(217,217,217,.66)
+    font-size: 0
+    &:before
+        content: ""
+        position: absolute
+        top: 8px
+        left: 16px
+        +s(slick-prev)
+    &:hover
+        background: $orange
+        &:before
+            +s(slick-prev-h)    
+.slick-next
+    left: auto
+    right: 0
+    &:before
+        content: ""
+        position: absolute
+        top: 8px
+        left: 16px
+        +s(slick-next)
+    &:hover
+        &:before
+            +s(slick-next-h)        
