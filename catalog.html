@@ -3,11 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<title>catalog</title>
-	<meta name="viewport" content="initial-scale=1"/>
+	<meta name="viewport" content="width=device-width">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="screen" href="css/fotorama.css" >
+	<link rel="stylesheet" media="screen" href="css/jquery-ui.css" >
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<link rel="stylesheet" media="screen" href="css/font-awesome.min.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -195,12 +196,216 @@
 	<div class="container">
 		<!-- BEGIN sidebar -->
 		<aside class="sidebar">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore mollitia, quis maxime in aut nisi voluptatibus natus rem perferendis voluptates repudiandae quas reiciendis sequi sed accusamus quasi unde soluta amet?
+			<div class="filters">
+				<div class="filters__item">
+					<div class="range-slider">
+						<div class="range-slider__topper">
+							<span class="filters__title">Цена</span>
+							<input type="text" class="range-slider__min" readonly>
+							<span>-</span>
+							<input type="text" class="range-slider__max" readonly>
+						</div>
+						<div id="slider-range"></div>
+					</div>
+				</div>
+				<div class="filters__item">
+					<div class="filters__title">Материал</div>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Искусственный велюр</span>
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Искусственная кожа</span>
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Натуральная кожа</span>
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Искусственная кожа (лак)</span>
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Текстиль</span>
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Текстиль, искусственная кожа</span>
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Натуральная кожа (велюр)</span>
+					</label>
+				</div>
+				<div class="filters__item">
+					<div class="filters__title">Размер</div>
+					<div class="filters__wrap">
+						<label class="checkbox-size">
+							<input type="checkbox">
+							<span>37</span>
+						</label>
+						<label class="checkbox-size">
+							<input type="checkbox">
+							<span>38</span>
+						</label>
+						<label class="checkbox-size">
+							<input type="checkbox">
+							<span>39</span>
+						</label>
+						<label class="checkbox-size">
+							<input type="checkbox">
+							<span>40</span>
+						</label>
+						<label class="checkbox-size">
+							<input type="checkbox">
+							<span>41</span>
+						</label>
+						<label class="checkbox-size">
+							<input type="checkbox">
+							<span>42</span>
+						</label>
+					</div>	
+				</div>
+				<div class="filters__item">
+					<div class="filters__title">Цвет</div>
+					<div class="filters__wrap">
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #ffcd96;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #ffffff;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #00cccd;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #ffcd00;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #009b00;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-image: url(img/color1.jpg);"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-image: url(img/color2.jpg);"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #673300;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #ff0000;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #ff6500;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #ff2e63;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #cecece;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #999999;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #0000ff;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #ff00ff;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #000000;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #f2e8c7;"></span>
+						</label>
+						<label class="checkbox-color">
+							<input type="checkbox">
+							<span style="background-color: #660000;"></span>
+						</label>
+					</div>
+				</div>
+				<div class="filters__item">
+					<div class="filters__title">Высота каблука</div>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>до 3 см</span>
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>от 3 до 7 см</span>
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>без каблука</span>
+					</label>
+				</div>
+				<div class="filters__item">
+					<div class="filters__title">Коллекция</div>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Осень-зима 2012-2013</span>
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Весна-лето 2013</span>
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Осень-зима 2013-2014</span>
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Весна-лето 2014</span>
+					</label>
+				</div>
+				<div class="filters__item">
+					<div class="filters__title">Сезон</div>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Лето</span>
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Всесезон</span>
+					</label>
+				</div>
+				<div class="filters__item">
+					<div class="subscribe">
+						<div class="subscribe__title">Подписка на новости</div>
+						<p>Хотите всегда быть в курсе модных тенденций? Подпишитесь на нашу новостную рассылку и будьте счастливы.</p>
+						<div class="check">
+							<input type="text" placeholder="Ваш e-mail адрес ">
+							<button type="submit">Подписаться</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</aside>
 		<!-- END sidebar -->
 		<!-- BEGIN main -->
 		<section class="main">
-			<div class="main__topper">
+			<div class="main__nav">
 				<nav class="breadcrumbs">
 					<ul class="breadcrumbs__list">
 						<li class="fa"><a href="#">Главная</a></li>
@@ -459,6 +664,37 @@
 						</div>
 					</li>
 				</ul>
+			</div>
+			<div class="main__nav">
+				<div class="number">
+					<ul>
+						<li><a href="#">12</a></li>
+						<li><a href="#">24</a></li>
+						<li><a href="#">48</a></li>
+						<li><a href="#">показать все</a></li>
+					</ul>
+				</div>
+				<nav class="pagination">
+					<ul class="pagination__list">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li>...</li>
+						<li><a href="#">16</a></li>
+					</ul>
+					<div class="pagination__next">
+						<a href="#"></a>
+					</div>
+				</nav>
+			</div>
+			<div class="catalog-descr">
+				<p>Мягкие удобные балетки, повторяющие контуры стопы, обеспечивают легкость и естественность движений. Пик моды балеток начался после премьеры на обложке нью-йоркского Vogue.</p>
+				<p>С каждым годом балетки становятся всё популярнее у модниц, благодаря тому что они повторяют форму стопы и их удобно носить.</p>
+				<p>В Obuv.com представлен выбор недорогих балеток разных цветов, вы сможете выбрать балетки в нужном вам стиле. Балетки любят все, они удобны и практичны, недорогие и позволяют ногам чувствовать себя комфортно.</p>
+				<p>Белые балетки отлично смотрятся с джинсами и лёгкими платьями, а черные балетки гармонируют с офисным или вечерним нарядом. Европейские модницы выбирают текстильные модели в качестве домашнего варианта обуви. </p>
+				<p>Купить балетки вы можете в <a href="#">ближайшем к вам магазине</a> Obuv.com.</p>
 			</div>
 		</section>
 		<!-- END main -->

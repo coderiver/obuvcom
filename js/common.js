@@ -163,6 +163,22 @@ head.ready(function() {
     		tab();
     	};
 
+// range ui slider
+
+	$( "#slider-range" ).slider({
+      	range: true,
+      	min: 0,
+      	max: 3000,
+      	values: [ 220, 1500 ],
+      	slide: function( event, ui ) {
+      	  $( ".range-slider__min" ).val( ui.values[ 0 ] );
+      	  $( ".range-slider__max" ).val( ui.values[ 1 ] );
+      }
+    });
+    $( ".range-slider__min" ).val( $( "#slider-range" ).slider( "values", 0 ));
+    $( ".range-slider__max" ).val( $( "#slider-range" ).slider( "values", 1 ));
+
+
 // resize
 	
 	$(window).resize(function(){

@@ -189,6 +189,7 @@
 
 .catalog
     +justify
+    margin-bottom: -32px
     &__item
         +justify-child
         width: 30%
@@ -223,11 +224,211 @@
         a
             display: inline-block
             vertical-align: middle
-            +s(next)                
-
+            +s(next)
+.number
+    float: left
+    ul
+        +clr
+        li
+            float: left
+            height: 70px
+            line-height: 70px
+            margin-right: 25px 
+            a
+                display: inline-block
+                vertical-align: middle
+                font-size: 24px
+                color: $orange
+                text-decoration: none
+                &:hover
+                    color: #333                            
+.catalog-descr
+    padding: 20px 32px 40px
+    font-size: 13px
+    line-height: 1 
+    color: #333
+    p
+        margin-bottom: 10px
+    a
+        text-decoration: none
+        color: $orange
 //sidebar
 .sidebar
     float: right
     width: 25%
-    background: #333            
-            
+    background: #333
+.filters
+    padding: 40px 10%
+    +r(1366)
+        padding: 35px 8% 
+    +r(1280)
+        padding: 30px 5%                  
+    &__item
+        margin-bottom: 30px
+    &__title
+        display: block
+        margin-bottom: 12px
+        font-size: 24px
+        color: #fff
+        +r(1440)
+            font-size: 20px
+        +r(1280)
+            font-size: 18px
+    &__wrap
+        +clr
+        margin-left: -6px                    
+.range-slider
+    &__topper
+        vertical-align: middle
+        margin-bottom: 32px
+        color: #fff
+        span, input
+            display: inline-block
+            vertical-align: middle
+            margin-bottom: 0             
+        input
+            width: 80px
+            height: 46px
+            margin-left: 10px
+            margin-right: 10px
+            +box
+            background: #4d4d4d
+            text-align: center
+            font-size: 24px
+            color: #fff
+            +r(1440)
+                width: 70px
+            +r(1280)
+                width: 63px
+                height: 36px
+                font-size: 20px
+.checkbox
+    position: relative
+    display: block
+    margin-bottom: 12px
+    input
+        display: inline-block
+        opacity: 0
+        width: 16px
+        height: 16px
+    input + span
+        position: relative
+        padding-left: 10px
+        font-size: 15px
+        color: #fff
+        +nosel
+        &:before
+            content: ""   
+            position: absolute
+            top: 3px
+            left: -20px
+            width: 16px
+            height: 16px
+            background: #4d4d4d
+    input:checked + span
+        color: $orange
+        &:before
+            background: $orange
+        &:after
+            content: ""
+            position: absolute
+            top: 5px
+            left: -18px
+            +s(checkbox)
+.checkbox-size
+    position: relative
+    float: left
+    width: 46px
+    height: 46px
+    margin-left: 6px
+    margin-bottom: 6px
+    input
+        opacity: 0
+        display: block
+        width: 46px
+        height: 46px
+    input + span
+        position: absolute
+        top: 0
+        left: 0
+        width: 46px
+        height: 46px
+        line-height: 46px
+        text-align: center
+        font-size: 24px
+        color: #fff
+        background: #4d4d4d
+        cursor: pointer
+    input:checked + span
+        background: $orange                                          
+.checkbox-color
+    position: relative
+    float: left
+    width: 46px
+    height: 46px
+    margin-left: 6px
+    margin-bottom: 6px
+    input
+        opacity: 0
+        display: block
+        width: 46px
+        height: 46px
+    input + span
+        position: absolute
+        top: 0
+        left: 0
+        width: 46px
+        height: 46px
+        +cover
+        cursor: pointer
+    input:checked + span
+        &:before
+            content: ""
+            position: absolute
+            top: 2px
+            left: 2px
+            +arr(32, 32, #333, tl)
+        &:after
+            content: ""
+            position: absolute
+            top: 5px
+            left: 5px
+            +s(checkbox)
+.subscribe
+    padding-top: 10px
+    color: #fff
+    p
+        font-size: 13px
+        margin-bottom: 15px 
+    &__title
+        position: relative
+        padding-left: 50px
+        margin-bottom: 15px 
+        font-size: 24px
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            +s(subscribe)
+    .check
+        float: none
+        input
+            width: 70%
+        button
+            width: 30%
+            background: $orange
+        +r(1560)
+            button
+                font-size: 13px    
+        +r(1440)
+            input
+                width: 65%
+            button
+                width: 35%
+                font-size: 12px    
+        +r(1280)
+            input
+                width: 60%
+            button
+                width: 40%             
