@@ -6,6 +6,7 @@ $w1560: 1560px
 $w1440: 1440px
 $w1366: 1366px
 $w1280: 1280px
+$w1200: 1200px
 $w1024: 1024px
 
 =r($media)
@@ -20,10 +21,13 @@ $w1024: 1024px
 			@content
 	@if $media == w1366
 		@media only screen and (max-width: $w1366)
-			@content
+			@content		
 	@if $media == w1280
 		@media only screen and (max-width: $w1280)
 			@content
+	@if $media == w1200
+		@media only screen and (max-width: $w1200)
+			@content		
 	@if $media == w1024
 		@media only screen and (max-width: $w1024)
 			@content
