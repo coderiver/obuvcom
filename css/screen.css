@@ -304,7 +304,7 @@ h2 { font-weight: normal; font-size: 24px; color: #333333; }
 .item { position: relative; *zoom: 1; }
 .item:after { content: " "; display: table; clear: both; }
 .item__like { position: absolute; top: 0; left: 0; width: 54px; margin-right: 5%; z-index: 10; }
-.item__gallery { float: left; width: 50%; padding-right: 5%; margin-bottom: 50px; padding-left: 130px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.item__gallery { float: left; width: 50%; padding-right: 5%; margin-bottom: 50px; padding-left: 11%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .item__info { float: right; width: 47%; }
 .item__topper { *zoom: 1; margin-bottom: 40px; }
 .item__topper:after { content: " "; display: table; clear: both; }
