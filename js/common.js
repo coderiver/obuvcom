@@ -1,5 +1,25 @@
 head.ready(function() {
 
+// scrollpane
+	$('.js-scroll').each(function(){
+		$(this).jScrollPane();
+		var api = $(this).data('jsp');
+		var throttleTimeout;
+
+		$(window).resize(function(){
+			if (!throttleTimeout) {
+				throttleTimeout = setTimeout(
+					function()
+					{
+						api.reinitialise();
+						throttleTimeout = null;
+					},
+					50
+				);
+			}
+		});
+	});
+
 // banner
 
 	function banner(){
@@ -8,11 +28,14 @@ head.ready(function() {
 	}
 	banner();
 
-	$('.banner').on('click', function(){
+	if ($('.banner').length) {
+		$('.banner').on('click', function(){
 		$('html, body').animate({
     	  scrollTop: $('.main').offset().top
     	}, 500);
 	});
+	};
+	
 
 	$('section[data-type="background"]').each(function(){
         var bgobj = $(this); // assigning the object
@@ -57,7 +80,8 @@ head.ready(function() {
 	);
 
 // yandex map
-    ymaps.ready(function () {
+	if ($('.m-shops__map').length) {
+		ymaps.ready(function () {
     var myMap = new ymaps.Map('YMapsID', {
         center: [55.751077,37.618346],
         zoom: 12,
@@ -79,7 +103,9 @@ head.ready(function() {
 
      myMap.geoObjects
         .add(myPlacemark1)
-     });   
+     });
+	};
+       
 
 // parallax affect
 
@@ -138,7 +164,10 @@ head.ready(function() {
 			$('.anim').addClass('is-loaded');
 		};
 	}
-	animLoad();
+	if ($('.main').length) {
+		animLoad();
+	};
+	
 
 // tabs
 	function tab() {
@@ -188,12 +217,31 @@ head.ready(function() {
 			slidesToScroll: 1,
 		});
 	};
-	
+
+// select
+
+	if ($('.select').length) {
+		$('.select__title').on('click', function(){
+			$(this).parent().toggleClass('is-open');
+		});
+	};
+
+
 
 // resize
 	
 	$(window).resize(function(){
 		banner();
+		if (!throttleTimeout) {
+			throttleTimeout = setTimeout(
+				function()
+				{
+					api.reinitialise();
+					throttleTimeout = null;
+				},
+				50
+			);
+		}
 	});	
 
 // scroll
