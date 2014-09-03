@@ -530,3 +530,9 @@ article table td a { text-decoration: none; }
 .advert__bottom .checkbox input + span { color: #333333; }
 
 .btn { float: right; width: 130px; height: 46px; background: #f05223; color: white; font-size: 15px; }
+
+.gallery-wrap { overflow: auto; position: absolute; top: 86px; left: 0; right: 0; bottom: 86px; }
+
+.gallery { font-size: 0; height: 100%; white-space: nowrap; }
+.gallery li { display: inline-block; height: 100%; font-size: 0; }
+.gallery li img { display: block; height: 100%; width: auto; }

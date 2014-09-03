@@ -226,22 +226,21 @@ head.ready(function() {
 		});
 	};
 
+// gallery scroll
+
+	$(".gallery-wrap").mousewheel(function(event, delta) {
+
+      this.scrollLeft -= (delta * 30);
+    
+      event.preventDefault();
+
+   });
 
 
 // resize
 	
 	$(window).resize(function(){
 		banner();
-		if (!throttleTimeout) {
-			throttleTimeout = setTimeout(
-				function()
-				{
-					api.reinitialise();
-					throttleTimeout = null;
-				},
-				50
-			);
-		}
 	});	
 
 // scroll
